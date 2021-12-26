@@ -1,0 +1,5 @@
+{
+  "name": "${repo_name}",
+  "full_name": "${username}/${repo_name}",
+  "private": "skip"
+}

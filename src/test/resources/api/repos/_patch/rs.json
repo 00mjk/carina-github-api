@@ -1,0 +1,9 @@
+{
+  "id": "skip",
+  "name": "${repo_name}",
+  "full_name": "${username}/${repo_name}",
+  "private": "skip",
+  "owner": "skip",
+  "description": "${description}",
+  "url": "https://api.github.com/repos/${username}/${repo_name}"
+}

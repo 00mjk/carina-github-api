@@ -1,0 +1,67 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+
+    "required": [
+        "id",
+        "name",
+        "full_name",
+        "private",
+        "owner",
+        "url",
+    ],
+    "properties": {
+        "id": {
+            "type": "integer",
+        },
+        "name": {
+            "type": "string",
+        },
+        "full_name": {
+            "type": "string",
+        },
+        "private": {
+            "type": "boolean",
+        },
+        "owner": {
+            "type": "object",
+            "required": [
+                "login",
+                "id",
+            ],
+            "properties": {
+                "login": {
+                    "type": "string",
+                },
+                "id": {
+                    "type": "integer",
+                },
+            },
+            "additionalProperties": true
+        },
+
+        "url": {
+            "$id": "#/properties/url",
+            "type": "string",
+            "title": "The url schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "https://api.github.com/repos/icalealr/test100"
+            ]
+        },
+
+        "topics": {
+            "type": "array",
+            "additionalItems": true,
+            "items": {
+                "$id": "#/properties/topics/items"
+            }
+        }
+    },
+    "additionalProperties": true
+}
